@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Lilian Orrit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-sm">
+      <nav class="container mx-auto px-6 py-4">
+        <ul class="flex justify-center space-x-8">
+          <li>
+            <a href="#accueil" class="hover:text-cyan-400 transition-colors"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="#mon-parcours"
+              class="hover:text-cyan-400 transition-colors"
+              >Mon parcours</a
+            >
+          </li>
+          <li>
+            <a href="#competences" class="hover:text-cyan-400 transition-colors"
+              >Compétences</a
+            >
+          </li>
+          <li>
+            <a href="#projets" class="hover:text-cyan-400 transition-colors"
+              >Projets</a
+            >
+          </li>
+          <li>
+            <a href="#stage" class="hover:text-cyan-400 transition-colors"
+              >Stage</a
+            >
+          </li>
+          <li>
+            <!-- <a
+              href="#certifications"
+              class="hover:text-cyan-400 transition-colors"
+              >Certifications</a
+            > -->
+          </li>
+          <li>
+            <!-- <a href="#contact" class="hover:text-cyan-400 transition-colors"
+              >Contact</a
+            > -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="accueil" class="min-h-screen relative flex items-center">
+      <canvas id="bg-animation" class="absolute inset-0"></canvas>
+      <div class="container mx-auto px-6 relative z-10">
+        <h1 class="text-6xl font-bold mb-4 glitch" data-text="Lilian Orrit">
+          Lilian Orrit
+        </h1>
+        <h2 class="text-3xl font-semibold mb-4 text-cyan-400">
+          Étudiant en Informatique
+        </h2>
+        <p class="text-xl mb-8 typing max-w-2xl">
+          Passionné par l'informatique et la cybersécurité, je suis actuellement
+          étudiant en informatique à l'EPSI.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <!-- <span class="px-4 py-2 bg-cyan-900/50 rounded-full text-cyan-400"
+            >Python</span
+          >
+          <span class="px-4 py-2 bg-cyan-900/50 rounded-full text-cyan-400"
+            >Linux</span
+          >
+          <span class="px-4 py-2 bg-cyan-900/50 rounded-full text-cyan-400"
+            >Bash</span
+          >
+          <span class="px-4 py-2 bg-cyan-900/50 rounded-full text-cyan-400"
+            >Docker</span
+          >
+          <span class="px-4 py-2 bg-cyan-900/50 rounded-full text-cyan-400"
+            >Réseaux</span
+          > -->
+        </div>
+      </div>
+    </section>
+    <section id="mon-parcours" class="min-h-screen relative flex items-center">
+      <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <h1 class="text-4xl font-bold text-center mb-2">
+          Formation & Expériences
+        </h1>
+        <p class="text-xl text-gray-600 text-center mb-12">
+          Mon parcours académique et mes expériences professionnelles.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Colonne Formations -->
+          <div class="relative">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-600">
+              Formations
+            </h2>
+            <!-- Ligne verticale -->
+            <div class="absolute left-4 top-16 h-full w-0.5 bg-gray-200"></div>
+
+            <!-- BTS SIO -->
+            <div class="flex mb-12">
+              <div class="shrink-0 relative">
+                <div
+                  class="h-8 w-8 bg-blue-500 rounded-full flex items-center justify-center z-10 relative"
+                >
+                  <div class="h-3 w-3 bg-white rounded-full"></div>
+                </div>
+              </div>
+              <div class="ml-8">
+                <h3 class="text-2xl font-bold">BTS SIO</h3>
+                <p class="text-gray-500 mt-1 mb-3">2023 - 2025</p>
+                <p class="text-gray-700">
+                  Formation en Services Informatiques aux Organisations,
+                  spécialisation en développement d'applications et/ou
+                  administration des systèmes et réseaux.
+                </p>
+              </div>
+            </div>
+
+            <!-- Socle Numérique -->
+            <div class="flex mb-12">
+              <div class="shrink-0 relative">
+                <div
+                  class="h-8 w-8 bg-blue-500 rounded-full flex items-center justify-center z-10 relative"
+                >
+                  <div class="h-3 w-3 bg-white rounded-full"></div>
+                </div>
+              </div>
+              <div class="ml-8">
+                <h3 class="text-2xl font-bold">Socle Numérique EPSI-WIS</h3>
+                <p class="text-gray-500 mt-1 mb-3">2023 - 2025</p>
+                <p class="text-gray-700">
+                  Formation complémentaire en développement d'applications web,
+                  intégration de maquettes, et maintenance de sites existants.
+                </p>
+              </div>
+            </div>
+
+            <!-- Baccalauréat -->
+            <div class="flex mb-12">
+              <div class="shrink-0 relative">
+                <div
+                  class="h-8 w-8 bg-blue-500 rounded-full flex items-center justify-center z-10 relative"
+                >
+                  <div class="h-3 w-3 bg-white rounded-full"></div>
+                </div>
+              </div>
+              <div class="ml-8">
+                <h3 class="text-2xl font-bold">
+                  Bac prof Systèmes Numériques option RISC
+                </h3>
+                <p class="text-gray-500 mt-1 mb-3">2019-2023</p>
+                <p class="text-gray-700">
+                  Baccalauréat professionnel en systèmes numériques
+                  (informatique et réseaux de communication).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne Expériences -->
+          <div class="relative">
+            <h2 class="text-3xl font-bold text-center mb-8 text-green-600">
+              Expériences
+            </h2>
+            <!-- Ligne verticale -->
+            <div class="absolute left-4 top-16 h-full w-0.5 bg-gray-200"></div>
+
+            <!-- Stage cybersécurité -->
+            <div class="flex mb-12">
+              <div class="shrink-0 relative">
+                <div
+                  class="h-8 w-8 bg-green-500 rounded-full flex items-center justify-center z-10 relative"
+                >
+                  <div class="h-3 w-3 bg-white rounded-full"></div>
+                </div>
+              </div>
+              <div class="ml-8">
+                <h3 class="text-2xl font-bold">Stage cybersécurité</h3>
+                <p class="text-gray-500 mt-1 mb-3">Janvier - Février 2025</p>
+                <p class="text-gray-700">
+                  Stage milieu de deuxième année. Apprentissage des techniques
+                  de cybersécurité, et mise en place de solutions de sécurité.
+                </p>
+              </div>
+            </div>
+
+            <!-- Stage développeur web -->
+            <div class="flex mb-12">
+              <div class="shrink-0 relative">
+                <div
+                  class="h-8 w-8 bg-green-500 rounded-full flex items-center justify-center z-10 relative"
+                >
+                  <div class="h-3 w-3 bg-white rounded-full"></div>
+                </div>
+              </div>
+              <div class="ml-8">
+                <h3 class="text-2xl font-bold">Stage développeur web</h3>
+                <p class="text-gray-500 mt-1 mb-3">Mai - Juin 2024</p>
+                <p class="text-gray-700">
+                  Stage de fin de première année. Développement d'un nouveau
+                  site web.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-12 text-center">
+          Compétences Techniques
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Développement -->
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Développement
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>HTML/CSS</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>PHP</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Python</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>JavaScript</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>SQL</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Frameworks : Bootstrap, Tailwind</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Outils de Développement -->
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Outils de Développement
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>GitHub</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Visual Studio Code</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Docker</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Laragon</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Développement Sécurisé -->
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Développement Sécurisé
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>SonarQube</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Git & GitHub</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Authentification par clé SSH</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Systèmes d'exploitation -->
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Systèmes d'exploitation
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Windows</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Windows Server</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Linux (Debian, Ubuntu)</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Administration système</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Systèmes de Virtualisation -->
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Systèmes de Virtualisation
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>VMware</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>VirtualBox</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Docker</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Réseaux et Cybersécurité (NOUVEAU) -->
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Réseaux et Cybersécurité
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Configuration réseau TCP/IP</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Protocoles réseau</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Pare-feu</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                <span>Analyse de vulnérabilités</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-12 text-center">Projets</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">PsyLib</h3>
+            <p class="mb-4 text-gray-200">
+              Site web pour une association de psychologues, permettant de
+              prendre des rendez-vous en ligne et de gérer les disponibilités
+              des thérapeutes.
+            </p>
+            <div class="flex gap-2 mb-4">
+              <span
+                class="px-3 py-1 bg-cyan-900/50 rounded-full text-sm text-cyan-400"
+                >PhP</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-900/50 rounded-full text-sm text-cyan-400"
+                >SQL</span
+              >
+            </div>
+            <div class="flex gap-4">
+              <a
+                href=""
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Voir le projet</a
+              >
+              <a
+                href="#"
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Documentation</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Creation d'une machine virtuelle Debian
+            </h3>
+            <p class="mb-4 text-gray-200">
+              Création d'une machine virtuelle Debian pour apprendre à faire du
+              hardening et apprendre les commandes de Linux
+            </p>
+            <div class="flex gap-2 mb-4">
+              <span
+                class="px-3 py-1 bg-cyan-900/50 rounded-full text-sm text-cyan-400"
+                >Debian</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-900/50 rounded-full text-sm text-cyan-400"
+                >VMware</span
+              >
+            </div>
+            <div class="flex gap-4">
+              <a
+                href=""
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Voir le projet</a
+              >
+              <a
+                href="Documentation/Debian.doc"
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Documentation</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Creation d'un jeu en python
+            </h3>
+            <p class="mb-4 text-gray-200">
+              Création d'un jeu en python pour apprendre à utiliser les
+              bibliothèques Pygame et Tkinter.
+            </p>
+            <div class="flex gap-2 mb-4">
+              <span
+                class="px-3 py-1 bg-cyan-900/50 rounded-full text-sm text-cyan-400"
+                >Python</span
+              >
+            </div>
+            <div class="flex gap-4">
+              <a
+                href=""
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Voir le projet</a
+              >
+              <a
+                href="Documentation/Debian.doc"
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Documentation</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Stage" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-12 text-center">Stage</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Stage Mairie
+            </h3>
+            <p class="mb-4 text-gray-200"></p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Rapport de Stage</a
+              >
+              <a
+                href="#"
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Grille d'évaluation</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg hover:bg-gray-800/80 transition-colors"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-cyan-400">
+              Stage cybersécurité
+            </h3>
+            <p class="mb-4 text-gray-200"></p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Rapport de Stage</a
+              >
+              <a
+                href="#"
+                class="inline-block text-cyan-400 hover:text-cyan-300 transition duration-200"
+                >Grille d'évaluation</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="certifications" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-12 text-center">Certifications</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg text-center hover:bg-gray-800/80 transition-colors"
+          >
+            <span class="text-cyan-400"></span>
+          </div>
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg text-center hover:bg-gray-800/80 transition-colors"
+          >
+            <span class="text-cyan-400">Pas de certifications</span>
+          </div>
+          <div
+            class="bg-gray-800/50 p-6 rounded-lg text-center hover:bg-gray-800/80 transition-colors"
+          >
+            <span class="text-cyan-400"></span>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <footer class="py-6 bg-gray-800/30">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-gray-400">© 2025 Lilian Orrit - Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script src="animations.js"></script>
+  </body>
+</html>
